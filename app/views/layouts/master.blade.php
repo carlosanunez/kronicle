@@ -7,6 +7,7 @@
             @show
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.png">
 
         <!-- CSS are placed here -->
         {{ HTML::style('css/bootstrap.css') }}
@@ -25,11 +26,26 @@
     <body>
         <div class="navbar navbar-fixed-top header blur">
             <div class="container">
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Wilfred's Blog</a>
+            <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Wilfred's Blog</a>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home" style="font-size:80%;"></span>&nbsp;&nbsp;Home</a></li>
-                <li><a href="/contact"><span class="glyphicon glyphicon-th" style="font-size:80%;">&nbsp;&nbsp;Projects</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-inbox" style="font-size:80%;">&nbsp;&nbsp;Contact</a></li>
+                @if ($active == 'home')
+                    <li class="active">
+                @else 
+                    <li>
+                @endif
+                <a href="/"><span class="glyphicon glyphicon-home" style="font-size:80%;"></span>&nbsp;&nbsp;Home</a></li>
+                @if ($active == 'projects')
+                    <li class="active">
+                @else 
+                    <li>
+                @endif
+                <a href="/projects"><span class="glyphicon glyphicon-th" style="font-size:80%;">&nbsp;&nbsp;Projects</a></li>
+                @if ($active == 'contact')
+                    <li class="active">
+                @else 
+                    <li>
+                @endif
+                <a href="/contact"><span class="glyphicon glyphicon-inbox" style="font-size:80%;">&nbsp;&nbsp;Contact</a></li>
             </ul>
             </div>
         </div>
@@ -40,17 +56,7 @@
             @yield('content')
 
         </div>
-        <div class="container centered footer">
-            <ul class="pagination">
-                <li><a href="#"><span class="glyphicon glyphicon-chevron-left" style="font-size: 70%"></span></a></li>
-                <li><a href="#" class="active">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="font-size: 70%"></a></li>
-            </ul>
-        </div>
+        
         <!-- Scripts are placed here -->
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}

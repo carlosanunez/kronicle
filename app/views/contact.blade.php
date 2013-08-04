@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-:: Contact
+| Contact
 @stop
 
 @section('content')

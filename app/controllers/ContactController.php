@@ -3,6 +3,7 @@
 	{
 		public function showContact()
 		{
-			return View::make('contact');
+			return View::make('contact')
+				->with('active', 'contact');
 		}
 	}
