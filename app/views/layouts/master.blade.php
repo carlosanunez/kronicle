@@ -28,7 +28,7 @@
             <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Wilfred's Blog</a>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home" style="font-size:80%;"></span>&nbsp;&nbsp;Home</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-th" style="font-size:80%;">&nbsp;&nbsp;Projects</a></li>
+                <li><a href="/contact"><span class="glyphicon glyphicon-th" style="font-size:80%;">&nbsp;&nbsp;Projects</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-inbox" style="font-size:80%;">&nbsp;&nbsp;Contact</a></li>
             </ul>
             </div>
