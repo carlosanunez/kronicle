@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'Conv_UniversLTStd-Light';
+	src: url('../fonts/UniversLTStd-Light.eot');
+	src: local('☺'), url('../fonts/UniversLTStd-Light.woff') format('woff'), url('../fonts/UniversLTStd-Light.ttf') format('truetype'), url('../fonts/UniversLTStd-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueLT Std UltLt';
+  src: url('../fonts/fontscore.com_h-helvetica-neue-lt-std-25-ultra-light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/fontscore.com_h-helvetica-neue-lt-std-25-ultra-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fontscore.com_h-helvetica-neue-lt-std-25-ultra-light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fontscore.com_h-helvetica-neue-lt-std-25-ultra-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fontscore.com_h-helvetica-neue-lt-std-25-ultra-light.svg#127711851060d024028a66ca1446ddd8') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/FuturaLT-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FuturaLT-Light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/FuturaLT-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/FuturaLT-Light.svg#8de9c4a7fd9b90b932104857e881150c') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+
+.navbar li a {
+	margin-top: 2px;
+}
+.active a {
+	background-color: rgba(255,255,255,0) !important;
+	color: #3399FB !important;
+}
+body {
+    padding-top: 40px;
+    background-color: #F8F8F8;
+    font-family: 'Conv_UniversLTStd-Light';
+}
+.centered {
+	text-align: center;
+}
+.content {
+	border-right: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.date {
+	color: #3BA4FC;
+	font-family: 'HelveticaNeueLT Std UltLt';
+}
+.header {
+	font-family: 'Futura LT';
+}
+.image {
+	margin-bottom: 20px;
+}
+.navbar {
+	background-color: rgba(255,255,255,0.94);
+	border-bottom: 1px solid #CCCCCC;
+}
+.rightered {
+	text-align: right;
+}
+.title {
+	font-family: 'HelveticaNeueLT Std UltLt';
+	font-size: 400%;
+}
+.pagination {
+	font-family: 'HelveticaNeueLT Std UltLt';
+}
+.pagination a {
+	height: 27px;
+}
+.pagination .active {
+	color: #CCCCCC;
+}
+.post {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.user {
+	margin-top: 20px;
+	font-size: 125%;
+	color: #F85674;
+	font-family: 'Futura LT';
+}
+
+
+@media all and (max-width: 767px) {
+body {
+	padding-top: 220px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+}

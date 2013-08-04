@@ -1,0 +1,27 @@
+Architecture
+- Posts
+	- ID
+	- Date
+	- Title
+	- Image
+	- Content
+	- Username
+
+- Users
+	- ID
+	- Username
+	- FirstName
+	- LastName
+	- Email
+	- Date
+
+
+Random ID generator 
+function gen_random_code(5) {
+	$characters = "abcdefghijklmnopqrstuvwxyzABCDERFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";  
+	$randomString = ""; 
+	for ($i = 0; $i < $length; $i++) {
+		$randomString .= $characters[mt_rand(0, strlen($characters)-1)];
+	}
+	return $randomString;
+} 
