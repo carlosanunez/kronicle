@@ -7,7 +7,17 @@
 
 @section('content')
 <div class="container contact">
-	<div class="title">contact</div>
+<div class="row">
+<div class="col-lg-5">
+	<div class="container contact-info">
+		<div class="title">email me</div>
+		<div class="container email">
+			<a href="mailto:dentonw3@gmail.com" class="btn btn-success"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;dentonw3@gmail.com</a>
+		</div>
+	</div>
+</div>
+<div class="col-lg-7 border-left">
+	<div class="title">ask me anything</div>
 	<div class="input-group">
 		<span class="input-group-addon">Name</span>
 		<input type="text" class="form-control" placeholder="John Doe">
@@ -27,6 +37,8 @@
 	<br>
 	<br>
 	<br>
+</div>
+</div>
 </div>
 	
 

@@ -25,8 +25,6 @@
   font-weight:  200;
 }
 
-
-
 .active a {
 	background-color: rgba(255,255,255,0) !important;
 	color: #3399FB !important;
@@ -36,12 +34,23 @@ body {
     background-color: #F8F8F8;
     font-family: 'Conv_UniversLTStd-Light';
 }
+.border-left {
+	border-left: 1px solid #DDDDDD;
+}
+.btn {
+	padding-top: 9px;
+}
 .centered {
 	text-align: center;
 }
 
 .contact{
 	padding-top: 40px;
+}
+.contact-info a span.glyphicon {
+	font-size:90%; 
+	position: relative; 
+	top: 2px;
 }
 .content {
 	border-right: 1px solid #DDDDDD;
@@ -56,6 +65,12 @@ body {
 .date {
 	color: #3BA4FC;
 	font-family: 'HelveticaNeueLT Std UltLt';
+}
+.email {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #DDDDDD;
 }
 .header {
 	font-family: 'Futura LT';
@@ -125,5 +140,9 @@ body {
 	padding-right: 20px;
 	padding-left: 20px;
 }
-
+}
+@media all and (max-width: 991px) {
+.border-left {
+	border-left: none;
+}
 }
