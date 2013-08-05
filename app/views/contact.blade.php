@@ -12,7 +12,10 @@
 	<div class="container contact-info">
 		<div class="title">email me</div>
 		<div class="container email">
-			<a href="mailto:dentonw3@gmail.com" class="btn btn-success"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;dentonw3@gmail.com</a>
+			<a href="mailto:dentonw3@gmail.com" class="btn btn-success">
+				<span class="glyphicon glyphicon-comment"></span>
+				&nbsp;&nbsp;dentonw3@gmail.com
+			</a>
 		</div>
 	</div>
 </div>
@@ -29,7 +32,7 @@
 	</div>
 	<br>
 	<div class="input-group">
-		<textarea  class="textarea" name="message" id="textarea" cols="100" rows="10" placeholder="Your Message"></textarea>
+		<textarea  class="textarea form-control" name="message" id="textarea" cols="100" rows="10" placeholder="Your Message"></textarea>
 	</div>
 	<br>
 	<br>

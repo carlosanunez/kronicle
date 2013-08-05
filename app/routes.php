@@ -13,3 +13,8 @@
 
 Route::get('/', 'HomeController@showWelcome');
 Route::get('/contact', 'ContactController@showContact');
+
+//Admin authentication
+Route::get('/login', 'AuthController@showLogin');
+Route::post('/login', 'AuthController@postLogin');
+Route::get('/logout', 'AuthController@getLogout');

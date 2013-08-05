@@ -18,7 +18,7 @@
 	<div><span class="title">Bibio</span></div>
 	<div class="image"><img src="img/bibio.jpg" / class="img-responsive" alt="bibio"></div>
 	<p>Proin vehicula neque vel lacus imperdiet, quis consectetur risus pulvinar. Fusce lacinia pellentesque ante sed tincidunt. Cras nisl erat, molestie sit amet porta non, placerat eget felis. Donec at condimentum urna. Nulla eu nunc consectetur, ornare libero ac, aliquam ipsum. Nam nisl diam, volutpat vitae augue at, ullamcorper placerat metus. Nunc nec nisl id lectus varius sollicitudin. Etiam quis nunc vel eros bibendum elementum. Aliquam iaculis ut tellus et fringilla. Fusce vel tortor vitae dolor condimentum vulputate. Sed at convallis metus, semper tristique massa. Suspendisse a enim sit amet magna pulvinar congue. Morbi imperdiet lorem quis erat hendrerit convallis.</p>
-	<div class="user">-&nbsp;wilfmeister</div>
+	<div class="user">-&nbsp;ekozx</div>
 </div>
 <div class="container centered footer">
     <ul class="pagination">
