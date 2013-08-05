@@ -19,7 +19,7 @@
 	</div>
 	<br>
 	<div class="input-group">
-		<textarea  class="textarea" name="message" id="textarea" cols="100" rows="10"></textarea>
+		<textarea  class="textarea" name="message" id="textarea" cols="100" rows="10" placeholder="Your Message"></textarea>
 	</div>
 	<br>
 	<br>

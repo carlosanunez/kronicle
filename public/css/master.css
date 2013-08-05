@@ -63,6 +63,13 @@ body {
 .image {
 	margin-bottom: 20px;
 }
+input {
+	padding-top: 8px !important;
+}
+.input-group-addon {
+	padding-top: 6px !important;
+	padding-bottom: 3px !important;
+}
 .navbar {
 	background-color: rgba(255,255,255,0.94);
 	border-bottom: 1px solid #CCCCCC;
