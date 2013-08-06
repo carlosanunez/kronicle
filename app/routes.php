@@ -26,3 +26,5 @@ Route::group(array('before' => 'auth'), function()
     Route::get('/create', 'PostsController@create');
 });
 
+Route::get('/projects', 'ProjectsController@showProjects');
+
