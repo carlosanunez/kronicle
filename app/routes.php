@@ -18,3 +18,6 @@ Route::get('/contact', 'ContactController@showContact');
 Route::get('/login', 'AuthController@showLogin');
 Route::post('/login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@getLogout');
+
+
+Route::post('/mail', 'MailController@sendMail');
