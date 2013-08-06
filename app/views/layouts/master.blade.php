@@ -19,8 +19,10 @@
         <style>
         @section('styles')
             @if ( Auth::user() )
+                @media all and (max-width: 767px) {
                 body {
                     padding-top: 170px;
+                }
                 }      
             @endif
         </style>
