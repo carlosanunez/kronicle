@@ -7,23 +7,30 @@
             @show
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
         <link rel="icon" type="image/png" href="img/favicon.png">
 
         <!-- CSS are placed here -->
         {{ HTML::style('css/bootstrap.css') }}
-        {{ HTML::style('css/bootstrap-responsive.css') }}
         {{ HTML::style('css/bootstrap-glyphicons.css') }}
         {{ HTML::style('css/docs.css') }}
         {{ HTML::style('css/master.css')}}
 
-        <style>
         @section('styles')
             @if ( Auth::user() )
+            <style>
+                @media all and (max-width: 767px) {
                 body {
                     padding-top: 170px;
-                }      
+                }
+                }   
+            </style>   
             @endif
-        </style>
+        @show
     </head>
 
     <body>
@@ -57,7 +64,11 @@
                     @if ( Auth::guest() )
                         
                     @else
-                        <li id="post-btn"><a href="/create"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;</a></li>
+                        @if ($active == 'create')
+                            <li id="post-btn"><a href="/create"><span style="color: #349BFB" class="glyphicon glyphicon-plus"></span></a></li>
+                        @else
+                            <li id="post-btn"><a href="/create"><span class="glyphicon glyphicon-plus"></span></a></li>
+                        @endif
                         <li id="logout-btn"><a href="/logout"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
                     @endif
                 </ul>
