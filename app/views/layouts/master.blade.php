@@ -25,6 +25,7 @@
                 }
                 }      
             @endif
+        @show
         </style>
     </head>
 
