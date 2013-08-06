@@ -15,6 +15,11 @@ Route::get('/', 'HomeController@showWelcome');
 Route::get('/contact', 'ContactController@showContact');
 
 //Admin authentication
-Route::get('/login', 'AuthController@showLogin');
+Route::get('/login', array('as' => 'login', 'uses' => 'AuthController@showLogin'));
 Route::post('/login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@getLogout');
+
+Route::group(array('before' => 'auth'), function()
+{
+    Route::get('/create', 'PostsController@create');
+});

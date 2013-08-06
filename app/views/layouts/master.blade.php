@@ -59,7 +59,11 @@
                     @if ( Auth::guest() )
                         
                     @else
-                        <li id="post-btn"><a href="/create"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;</a></li>
+                        @if ($active == 'create')
+                            <li id="post-btn"><a href="/create"><span style="color: #349BFB" class="glyphicon glyphicon-plus"></span></a></li>
+                        @else
+                            <li id="post-btn"><a href="/create"><span class="glyphicon glyphicon-plus"></span></a></li>
+                        @endif
                         <li id="logout-btn"><a href="/logout"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
                     @endif
                 </ul>
