@@ -36,7 +36,7 @@
     <body>
         <div class="navbar navbar-fixed-top header blur">
             <div class="container">
-                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Kronicle/a>
+                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Kronicle</a>
                 <ul class="nav navbar-nav">
                     @if ($active == 'home')
                         <li class="active">
