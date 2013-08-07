@@ -53,14 +53,34 @@
     <body>
         <div class="navbar navbar-fixed-top header blur">
             <div class="container">
-                <a class="navbar-brand"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span><span class="">&nbsp;&nbsp;Kronicle</span></a>
-                <ul class="nav navbar-nav">
+                <a href="/" class="navbar-brand">
+                    <span class="glyphicon glyphicon-align-left" style="color: #F75F7A;"></span>
                     @if ($active == 'home')
+                        <span style="color: #3BA4FC">
+                    @else
+                        <span>
+                    @endif        
+                    Kronicle</span>
+                </a>
+                
+                <ul class="nav navbar-nav">
+                    @if ($active == 'tags')
                         <li class="active">
                     @else 
                         <li>
                     @endif
-                    <a href="/"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+                    <div class="dropdown">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="#">Games</a></li>
+                            <li><a tabindex="-1" href="#">Hot Girls</a></li>
+                            <li><a tabindex="-1" href="#">Movies</a></li>
+                            <li><a tabindex="-1" href="#">Music</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="/">Home</a></li>
+                        </ul>
+                    </div>
+                    </li>
                     @if ($active == 'projects')
                         <li class="active">
                     @else 
