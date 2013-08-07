@@ -142,6 +142,33 @@ input {
 	top: 43px;
 	color: #777777;
 }
+.navbar .dropdown-menu::before {
+  position: absolute;
+  top: -7px;
+  left: 17px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #CCC;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.navbar .dropdown-menu::after {
+  position: absolute;
+  top: -6px;
+  left: 18px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  border-left: 6px solid transparent;
+  content: '';
+}
+.navbar .dropdown-toggle:hover {
+	color: black;
+}
+.navbar .dropdown-menu li.active a {
+	background-image: none;
+}
 .navbar .dropdown-toggle {
 	top: 16px;
 	position: relative;

@@ -77,7 +77,12 @@
                             <li><a tabindex="-1" href="#">Movies</a></li>
                             <li><a tabindex="-1" href="#">Music</a></li>
                             <li class="divider"></li>
-                            <li><a tabindex="-1" href="/">Home</a></li>
+                            @if ($active == 'home')
+                                <li class="active">
+                            @else
+                                <li>
+                            @endif
+                            <a tabindex="-1" href="/">Home</a></li>
                         </ul>
                     </div>
                     </li>
