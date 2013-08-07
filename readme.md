@@ -24,4 +24,4 @@ Documentation for the entire framework can be found on the [Laravel website](htt
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
-## ![kronicle icon](https://github.com/wilfreddenton/kronicle/blob/master/public/img/kronicle-icon_256x256x32.png)
+## ![kronicle icon](https://raw.github.com/wilfreddenton/kronicle/master/public/img/kronicle-icon_256x256x32.png)
