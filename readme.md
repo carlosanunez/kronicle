@@ -1,6 +1,6 @@
 ## ![kronicle logo](https://raw.github.com/wilfreddenton/kronicle/master/public/img/kronicle-logo-ultralight.png)
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+[![Laravel](http://f.cl.ly/items/0f1s1A2w0v0f0G043420/laravel-icns.png)](https://packagist.org/packages/laravel/framework) [![Bootstrap](http://f.cl.ly/items/2x0n3A1g2Z081c3q1t1K/bootstrap%20icon.png)](https://packagist.org/packages/laravel/framework) [![Glyphicons](http://f.cl.ly/items/2l100h3K3y310g3m2h3G/glyphicon%20icon.png)](https://travis-ci.org/laravel/framework)
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
 
