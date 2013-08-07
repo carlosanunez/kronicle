@@ -187,6 +187,22 @@ input {
 .rightered {
 	text-align: right;
 }
+.tag {
+	display: inline;
+	padding-right: 20px;
+	font-family: 'Futura LT';
+}
+.tag span {
+	font-size: 80%;
+}
+.tag a {
+	color: #F85674;
+}
+.tags {
+	list-style-type: none;
+	padding-top: 20px;
+	-webkit-padding-start: 0px;
+}
 .textarea {
 	width: 100%;
 	display: inline-block;
@@ -221,6 +237,12 @@ input {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #DDDDDD;
 }
+.post img {
+	padding-top: 10px;
+}
+.post p {
+	padding-top: 15px;
+}
 #post-btn span {
 	color: #65BC66;
 	font-size: 120%;
@@ -233,12 +255,6 @@ input {
 	height: 25px;
 	margin-top: 6px;
 	margin-left: 13px;
-}
-.user {
-	margin-top: 20px;
-	font-size: 125%;
-	color: #F85674;
-	font-family: 'Futura LT';
 }
 
 @media all and (max-width: 767px) {
