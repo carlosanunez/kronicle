@@ -1,4 +1,4 @@
-## ![kronicle logo](https://poser.pugx.org/laravel/framework/version.png)]
+## ![kronicle logo](https://raw.github.com/wilfreddenton/kronicle/master/public/img/kronicle-logo-ultralight.png)
 
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
 
