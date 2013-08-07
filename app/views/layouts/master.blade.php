@@ -21,15 +21,31 @@
         {{ HTML::style('css/master.css')}}
 
         @section('styles')
-            @if ( Auth::user() )
             <style>
+            @if ( Auth::user() )
                 @media all and (max-width: 767px) {
                 body {
-                    padding-top: 170px;
+                    padding-top: 190px;
                 }
-                }   
-            </style>   
+                }  
             @endif
+            @if ($active == 'projects')
+                body {
+                    background-image: linear-gradient(bottom, rgb(78,238,252) 0%, rgb(68,125,250) 55%);
+                    background-image: -o-linear-gradient(bottom, rgb(78,238,252) 0%, rgb(68,125,250) 55%);
+                    background-image: -moz-linear-gradient(bottom, rgb(78,238,252) 0%, rgb(68,125,250) 55%);
+                    background-image: -webkit-linear-gradient(bottom, rgb(78,238,252) 0%, rgb(68,125,250) 55%);
+                    background-image: -ms-linear-gradient(bottom, rgb(78,238,252) 0%, rgb(68,125,250) 55%);
+                    background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, rgb(78,238,252)),
+                    color-stop(0.55, rgb(68,125,250))
+                    );
+                }
+            @endif
+            </style>
         @show
     </head>
 
@@ -86,6 +102,7 @@
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/master.js') }}
+        {{ HTML::script('js/holder.js') }}
 
     </body>
 </html>
