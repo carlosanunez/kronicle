@@ -70,7 +70,7 @@
                         <li>
                     @endif
                     <div class="dropdown">
-                        <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                             <li><a tabindex="-1" href="#">Games</a></li>
                             <li><a tabindex="-1" href="#">Hot Girls</a></li>
