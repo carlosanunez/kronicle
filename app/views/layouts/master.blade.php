@@ -46,22 +46,6 @@
                 }
                 } 
             @endif
-            @if ($active == 'projects')
-                body {
-                    background-image: linear-gradient(bottom, rgb(78,238,252) 36%, rgb(68,125,250) 68%);
-                    background-image: -o-linear-gradient(bottom, rgb(78,238,252) 36%, rgb(68,125,250) 68%);
-                    background-image: -moz-linear-gradient(bottom, rgb(78,238,252) 36%, rgb(68,125,250) 68%);
-                    background-image: -webkit-linear-gradient(bottom, rgb(78,238,252) 36%, rgb(68,125,250) 68%);
-                    background-image: -ms-linear-gradient(bottom, rgb(78,238,252) 36%, rgb(68,125,250) 68%);
-                    background-image: -webkit-gradient(
-                    linear,
-                    left bottom,
-                    left top,
-                    color-stop(0.36, rgb(78,238,252)),
-                    color-stop(0.68, rgb(68,125,250))
-                    );
-                }
-            @endif
             </style>
         @show
     </head>
@@ -69,7 +53,7 @@
     <body>
         <div class="navbar navbar-fixed-top header blur">
             <div class="container">
-                <a class="navbar-brand"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span>&nbsp;&nbsp;Kronicle</a>
+                <a class="navbar-brand"><span class="glyphicon glyphicon-align-left" style="color: #F75F7A"></span><span class="">&nbsp;&nbsp;Kronicle</span></a>
                 <ul class="nav navbar-nav">
                     @if ($active == 'home')
                         <li class="active">

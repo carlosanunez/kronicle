@@ -22,7 +22,7 @@
 	      <div class="caption">
 	        <h3>Thumbnail label</h3>
 	        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-	        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+	        <p><a href="#" class="btn btn-success">Learn More</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -33,7 +33,7 @@
       <div class="caption">
         <h3>Thumbnail label</h3>
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+        <p><a href="#" class="btn btn-success">Learn More</a></p>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
       <div class="caption">
         <h3>Thumbnail label</h3>
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+        <p><a href="#" class="btn btn-success">Learn More</a></p>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
 	      <div class="caption">
 	        <h3>Thumbnail label</h3>
 	        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-	        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+	        <p><a href="#" class="btn btn-success">Learn More</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -69,7 +69,7 @@
       <div class="caption">
         <h3>Thumbnail label</h3>
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+        <p><a href="#" class="btn btn-success">Learn More</a></p>
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@
       <div class="caption">
         <h3>Thumbnail label</h3>
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn btn-default">Action</a></p>
+        <p><a href="#" class="btn btn-success">Learn More</a></p>
       </div>
     </div>
   </div>
