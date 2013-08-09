@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'HomeController@showHome');
 Route::get('/contact', 'ContactController@showContact');
 
 //Admin authentication
