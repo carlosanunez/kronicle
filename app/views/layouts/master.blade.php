@@ -51,7 +51,7 @@
     </head>
 
     <body>
-        <div class="navbar navbar-fixed-top header blur">
+        <div class="navbar navbar-fixed-top header">
             <div class="container">
                 <a href="/" class="navbar-brand">
                     <span class="glyphicon glyphicon-align-left" style="color: #F75F7A;"></span>
