@@ -28,3 +28,5 @@ Route::group(array('before' => 'auth'), function()
 
 Route::get('/projects', 'ProjectsController@showProjects');
 
+Route::get('/catagory', 'CatagoryController@showCatagory');
+

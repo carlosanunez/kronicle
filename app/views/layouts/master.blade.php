@@ -72,10 +72,10 @@
                     <div class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                            <li><a tabindex="-1" href="#">Games</a></li>
-                            <li><a tabindex="-1" href="#">Hot Girls</a></li>
-                            <li><a tabindex="-1" href="#">Movies</a></li>
-                            <li><a tabindex="-1" href="#">Music</a></li>
+                            <li><a tabindex="-1" href="/catagory?cat=Games">Games</a></li>
+                            <li><a tabindex="-1" href="/catagory?cat=Hot Girls">Hot Girls</a></li>
+                            <li><a tabindex="-1" href="/catagory?cat=Movies">Movies</a></li>
+                            <li><a tabindex="-1" href="/catagory?cat=Music">Music</a></li>
                             <li class="divider"></li>
                             @if ($active == 'home')
                                 <li class="active">
