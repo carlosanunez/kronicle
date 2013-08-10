@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-| Home
+| {{$tag}}
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
 				print '</span>';
 			print '</div>';
 			print '<div class="image">';
-				print '<img src="'.$posts[$count]['photo'].'" class="img-responsive" />';
+				print '<img src="../'.$posts[$count]['photo'].'" class="img-responsive" />';
 			print '</div>';
 			print '</p>';
 				print $posts[$count]['content'];
@@ -29,7 +29,7 @@
 				$countTags = 0;
 				while ($countTags < count($posts[$count]['tags'])) {
 				print '<li class="tag">';
-					print '<a href="/tags/'.$posts[$count]['tags'][$countTags][0]['tagID'].'">';
+					print '<a href="/tags/'.$posts[$count]['tags'][$countTags][0]['tag'].'">';
 						print '<span class="glyphicon glyphicon-tag"></span>';
 						print '&nbsp;';
 						print $posts[$count]['tags'][$countTags][0]['tag'];

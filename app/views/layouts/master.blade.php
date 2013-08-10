@@ -27,6 +27,16 @@
                     padding-top: 45px;
                 }
             @endif
+            @if ($active == 'contact')
+                body {
+                    padding-top: 60px;
+                }
+            @endif
+            @if ($active == 'projects')
+                body {
+                    padding-top: 60px;
+                }
+            @endif
             @if ( Auth::user() && $active == 'home')
                 @media all and (max-width: 767px) {
                 body {
@@ -72,10 +82,30 @@
                     <div class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                            <li><a tabindex="-1" href="/catagory?cat=Games">Games</a></li>
-                            <li><a tabindex="-1" href="/catagory?cat=Hot Girls">Hot Girls</a></li>
-                            <li><a tabindex="-1" href="/catagory?cat=Movies">Movies</a></li>
-                            <li><a tabindex="-1" href="/catagory?cat=Music">Music</a></li>
+                            @if ($activetag == "games")
+                                <li class="activetag">
+                            @else
+                                <li>
+                            @endif
+                                <a tabindex="-1" href="/tags/games">Games</a></li>
+                            @if ($activetag == "hot girls")
+                                <li class="activetag">
+                            @else
+                                <li>
+                            @endif
+                                <a tabindex="-1" href="/tags/hot_girls">Hot Girls</a></li>
+                            @if ($activetag == "movies")
+                                <li class="activetag">
+                            @else
+                                <li>
+                            @endif
+                                <a tabindex="-1" href="/tags/movies=Movies">Movies</a></li>
+                            @if ($activetag == "music")
+                                <li class="activetag">
+                            @else
+                                <li>
+                            @endif
+                                <a tabindex="-1" href="/tags/music">Music</a></li>
                             <li class="divider"></li>
                             @if ($active == 'home')
                                 <li class="active">

@@ -20,7 +20,8 @@ class HomeController extends BaseController {
 		$posts = Post::getPosts(1);
 		return View::make('home')
 			->with('active', 'home')
-			->with('posts', $posts);
+			->with('posts', $posts)
+			->with('activetag', 'none');
 	}
 
 }

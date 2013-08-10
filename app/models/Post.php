@@ -9,6 +9,11 @@ class Post extends Eloquent {
 			throw new Exception($err);
 		}
 		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return Post::getTagsForPost($postrows);
+	}
+
+	public static function getTagsForPost($postrows) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
 		$count = 0;
 		while ($count < count($postrows)) {
 			$statement = $db->prepare('SELECT * FROM postTags WHERE postID=:postid');
@@ -18,13 +23,11 @@ class Post extends Eloquent {
 				$err = print_r($statement->errorInfo(), true);
 				throw new Exception($err);
 			}
-			
 			$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 			$count1 = 0;
 			$tags = array();
 			while($count1 < count($tagrows)) {
-				$statement = $db->prepare('SELECT tag FROM tags WHERE tagID=:tagid');
+				$statement = $db->prepare('SELECT * FROM tags WHERE tagID=:tagid');
 				$statement->bindValue(':tagid', $tagrows[$count1]['tagID'], PDO::PARAM_STR);
 				if (!$statement->execute())
 				{
@@ -37,10 +40,7 @@ class Post extends Eloquent {
 			$postrows[$count]['tags'] = $tags;
 			$count++;
 		}
-		
-		
-		return $postrows; 
-
+		return $postrows;
 
 	}
 }
