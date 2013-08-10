@@ -20,7 +20,8 @@ class PostsController extends BaseController {
 	public function create()
 	{
 		return View::make('create')
-			->with('active', 'create');
+			->with('active', 'create')
+			->with('activetag', 'none');
 	}
 
 	/**

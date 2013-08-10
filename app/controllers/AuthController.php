@@ -13,7 +13,8 @@ class AuthController extends BaseController {
 
         // Show the login page
         return View::make('auth/login')
-                ->with('active', 'login');
+                ->with('active', 'login')
+                ->with('activetag', 'none');
     }
     public function postLogin()
     {

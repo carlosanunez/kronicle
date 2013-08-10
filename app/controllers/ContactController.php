@@ -4,6 +4,7 @@
 		public function showContact()
 		{
 			return View::make('contact')
-				->with('active', 'contact');
+				->with('active', 'contact')
+				->with('activetag', 'none');
 		}
 	}
