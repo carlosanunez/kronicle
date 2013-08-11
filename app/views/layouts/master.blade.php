@@ -14,11 +14,14 @@
         <meta http-equiv="pragma" content="no-cache" />
         <link rel="icon" type="image/png" href="img/favicon.png">
 
+
         <!-- CSS are placed here -->
         {{ HTML::style('css/bootstrap.css') }}
         {{ HTML::style('css/bootstrap-glyphicons.css') }}
         {{ HTML::style('css/docs.css') }}
         {{ HTML::style('css/master.css')}}
+        {{ HTML::style('css/bootstrap-fileupload.css') }}
+        {{ HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css')}}
 
         @section('styles')
             <style>
@@ -156,9 +159,12 @@
         
         <!-- Scripts are placed here -->
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
+        {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js');}}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/master.js') }}
         {{ HTML::script('js/holder.js') }}
+        {{ HTML::script('js/bootstrap-fileupload.js') }}
+        {{ HTML::script('js/jquery.tagsinput.js') }}
 
     </body>
 </html>
