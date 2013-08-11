@@ -20,8 +20,13 @@
         {{ HTML::style('css/bootstrap-glyphicons.css') }}
         {{ HTML::style('css/docs.css') }}
         {{ HTML::style('css/master.css')}}
+<<<<<<< HEAD
         {{ HTML::style('css/bootstrap-fileupload.css') }}
         {{ HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css')}}
+=======
+        {{ HTML::style('css/jquery.tagsinput.css') }}
+        {{ HTML::style('css/bootstrap-fileupload.css')}}
+>>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 
         @section('styles')
             <style>
@@ -36,6 +41,11 @@
                 }
             @endif
             @if ($active == 'projects')
+                body {
+                    padding-top: 60px;
+                }
+            @endif
+             @if ($active == 'create')
                 body {
                     padding-top: 60px;
                 }
@@ -59,6 +69,9 @@
                 }
                 } 
             @endif
+            #tags_1_tag {
+                width: 100% !important;
+            }
             </style>
         @show
     </head>
@@ -85,6 +98,7 @@
                     <div class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-header">Common Tags</li>
                             @if ($activetag == "games")
                                 <li class="activetag">
                             @else
@@ -115,7 +129,7 @@
                             @else
                                 <li>
                             @endif
-                            <a tabindex="-1" href="/">Home</a></li>
+                            <a tabindex="-1" href="/tags">All Tags</a></li>
                         </ul>
                     </div>
                     </li>
@@ -163,8 +177,13 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/master.js') }}
         {{ HTML::script('js/holder.js') }}
+<<<<<<< HEAD
         {{ HTML::script('js/bootstrap-fileupload.js') }}
         {{ HTML::script('js/jquery.tagsinput.js') }}
+=======
+        {{ HTML::script('js/jquery.tagsinput.js') }}
+        {{ HTML::script('js/bootstrap-fileupload.js') }}
+>>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 
     </body>
 </html>

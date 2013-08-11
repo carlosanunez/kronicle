@@ -1,6 +1,7 @@
 $(window).load(function() {
 	$('.dropdown-toggle').dropdown();
 
+<<<<<<< HEAD
 	function onAddTag(tag) {
 			alert("Added a tag: " + tag);
 		}
@@ -33,6 +34,9 @@ $(window).load(function() {
 				//autocomplete_url:'test/fake_plaintext_endpoint.html' //jquery.autocomplete (not jquery ui)
 				autocomplete_url:'test/fake_json_endpoint.html' // jquery ui autocomplete requires a json endpoint
 			});
+=======
+	$('#tags_1').tagsInput({width: '100%', height: '0px', });
+>>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 });
 });		
 
