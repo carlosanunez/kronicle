@@ -20,8 +20,6 @@
         {{ HTML::style('css/bootstrap-glyphicons.css') }}
         {{ HTML::style('css/docs.css') }}
         {{ HTML::style('css/master.css')}}
-        {{ HTML::style('css/bootstrap-fileupload.css') }}
-        {{ HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css')}}
         {{ HTML::style('css/jquery.tagsinput.css') }}
         {{ HTML::style('css/bootstrap-fileupload.css')}}
 
@@ -170,12 +168,9 @@
         
         <!-- Scripts are placed here -->
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
-        {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js');}}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/master.js') }}
         {{ HTML::script('js/holder.js') }}
-        {{ HTML::script('js/bootstrap-fileupload.js') }}
-        {{ HTML::script('js/jquery.tagsinput.js') }}
         {{ HTML::script('js/jquery.tagsinput.js') }}
         {{ HTML::script('js/bootstrap-fileupload.js') }}
 
