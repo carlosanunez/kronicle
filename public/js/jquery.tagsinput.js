@@ -217,18 +217,11 @@
 				tags_callbacks[id]['onRemoveTag'] = settings.onRemoveTag;
 				tags_callbacks[id]['onChange'] = settings.onChange;
 			}
-	
-<<<<<<< HEAD
+
 			var markup = '<div id="'+id+'_tagsinput" class="tagsinput"><div id="'+id+'_addTag">';
 			
 			if (settings.interactive) {
 				markup = markup + '<input id="'+id+'_tag" value="" data-default="'+settings.defaultText+'" />';
-=======
-			var markup = '<div id="'+id+'_tagsinput" class="tagsinput container"><div id="'+id+'_addTag" class="container">';
-			
-			if (settings.interactive) {
-				markup = markup + '<input id="'+id+'_tag" value="" data-default="'+settings.defaultText+'"/>';
->>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 			}
 			
 			markup = markup + '</div><div class="tags_clear"></div></div>';

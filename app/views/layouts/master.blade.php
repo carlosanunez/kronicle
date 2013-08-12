@@ -20,13 +20,10 @@
         {{ HTML::style('css/bootstrap-glyphicons.css') }}
         {{ HTML::style('css/docs.css') }}
         {{ HTML::style('css/master.css')}}
-<<<<<<< HEAD
         {{ HTML::style('css/bootstrap-fileupload.css') }}
         {{ HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css')}}
-=======
         {{ HTML::style('css/jquery.tagsinput.css') }}
         {{ HTML::style('css/bootstrap-fileupload.css')}}
->>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 
         @section('styles')
             <style>
@@ -177,13 +174,10 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/master.js') }}
         {{ HTML::script('js/holder.js') }}
-<<<<<<< HEAD
         {{ HTML::script('js/bootstrap-fileupload.js') }}
         {{ HTML::script('js/jquery.tagsinput.js') }}
-=======
         {{ HTML::script('js/jquery.tagsinput.js') }}
         {{ HTML::script('js/bootstrap-fileupload.js') }}
->>>>>>> c82a443a5489483351d842075e3e223ebc8353ae
 
     </body>
 </html>
