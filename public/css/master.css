@@ -318,7 +318,7 @@ body {
 	outline: none;
 }
 .navbar-brand {
-	padding-top: 0px;
+	padding-top: 8px;
 	padding-bottom: 0px;
 }
 .navbar-nav li a {
@@ -328,6 +328,12 @@ body {
 .navbar-nav {
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+.navbar-toggle {
+	border:none;
+}
+.navbar-toggle:hover span {
+	background-color: white;
 }
 .search {
 	margin-top: 0px;

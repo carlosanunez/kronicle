@@ -74,6 +74,11 @@
     <body>
         <div class="navbar navbar-fixed-top header">
             <div class="container">
+                 <button style="z-index: 100;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
                 <a href="/" class="navbar-brand">
                     <span class="glyphicon glyphicon-align-left" style="color: #F75F7A;"></span>
                     @if ($active == 'home')
@@ -83,7 +88,7 @@
                     @endif        
                     Kronicle</span>
                 </a>
-                
+                <div class="nav-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
                     @if ($active == 'tags')
                         <li class="active">
@@ -155,7 +160,9 @@
                         @endif
                         <li id="logout-btn"><a href="/logout"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;logout</a></li>
                     @endif
+                    <div class="navbar-toggle"></div>
                 </ul>
+                </div>
             </div>
         </div>
         <!-- Container -->
