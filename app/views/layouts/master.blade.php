@@ -113,7 +113,7 @@
                             @else
                                 <li>
                             @endif
-                                <a tabindex="-1" href="/tags/movies=Movies">Movies</a></li>
+                                <a tabindex="-1" href="/tags/movies">Movies</a></li>
                             @if ($activetag == "music")
                                 <li class="activetag">
                             @else
