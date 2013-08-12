@@ -25,48 +25,6 @@
 
         @section('styles')
             <style>
-            @if ($active == 'home')
-                body {
-                    padding-top: 45px;
-                }
-            @endif
-            @if ($active == 'contact')
-                body {
-                    padding-top: 60px;
-                }
-            @endif
-            @if ($active == 'projects')
-                body {
-                    padding-top: 60px;
-                }
-            @endif
-             @if ($active == 'create')
-                body {
-                    padding-top: 60px;
-                }
-            @endif
-            @if ( Auth::user() && $active == 'home')
-                @media all and (max-width: 767px) {
-                body {
-                    padding-top: 170px;
-                }
-                }
-            @elseif (Auth::user() && $active != 'home')
-                @media all and (max-width: 767px) {
-                body {
-                    padding-top: 190px;
-                }
-                } 
-            @elseif (!(Auth::user()) && $active == 'home')
-                @media all and (max-width: 767px) {
-                body {
-                    padding-top: 130px;
-                }
-                } 
-            @endif
-            #tags_1_tag {
-                width: 100% !important;
-            }
             </style>
         @show
     </head>
