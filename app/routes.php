@@ -28,7 +28,10 @@ Route::group(array('before' => 'auth'), function()
 
 Route::get('/projects', 'ProjectsController@showProjects');
 
+Route::get('/tags/json', 'TagsController@json');
+
 Route::get('/tags/{tagID}', 'TagsController@show');
 
 Route::get('/tags', 'TagsController@index');
+
 

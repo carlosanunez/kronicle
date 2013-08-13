@@ -99,4 +99,9 @@ class TagsController extends BaseController {
 			->with('posts', $posts);
 	}
 
+	public function json() {
+		$tags = Tag::getTagsJson();
+		return View::make('tagsJson')
+			->with('tags', $tags);
+	}
 }

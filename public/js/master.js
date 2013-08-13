@@ -30,7 +30,7 @@ $(window).load(function() {
 			width: 'auto',
 
 			//autocomplete_url:'test/fake_plaintext_endpoint.html' //jquery.autocomplete (not jquery ui)
-			autocomplete_url:'test/fake_json_endpoint.html' // jquery ui autocomplete requires a json endpoint
+			autocomplete_url:'/tags/json' // jquery ui autocomplete requires a json endpoint
 		});
 	});
 });		

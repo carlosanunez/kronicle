@@ -62,4 +62,13 @@ class Tag extends Eloquent {
 		$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
 		return $tagrows;
 	}
+
+	public static function getTagsJson() {
+		$tags = Tag::getTags();
+		$tagNames = [];
+		foreach ($tags as $tag) {
+			$tagNames[] = $tag['tag'];
+		}
+		return json_encode($tagNames);
+	}
 }
