@@ -5,6 +5,14 @@
 | Create
 @stop
 
+@section('script')
+	new Medium({
+	    element: document.getElementById('article'),
+	    mode: 'rich',
+	    placeholder: 'Your Article'
+	});
+@stop
+
 @section('content')
 <div class="container">
 	<div class="title" style="padding-top: 20px;">Create Post</div>
@@ -33,13 +41,15 @@
 			</div>
 		<hr>
 	</div>
-		<div class="input-group" style="padding-top:30px">
-			<textarea  class="textarea form-control" name="message" id="textarea" cols="100" rows="10" placeholder="Your Message"></textarea>
-		</div>
+	<div class="container" style="margin-top: 30px">
+		<span class="glyphicon glyphicon-pencil"></span>
+		<span class="header">&nbsp;Write Post </span>
+		<div id="article" class="textarea"></div>
+	</div>
 	</div>
 	<div class="container form-section">
 		<span class="glyphicon glyphicon-tags"></span>
-		<span class="header">&nbsp;Tag the post</span>
+		<span class="header">&nbsp;Tag Post</span>
 		</p><input id="tags_1" class="form-control" name="tags" type="text" value=""/></p>	
 	</div>
 	<button class="btn btn-success form-control form-section" style="padding-top: 10px; padding-bottom: 26px">submit</button>

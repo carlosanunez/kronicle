@@ -22,11 +22,16 @@
         {{ HTML::style('css/master.css')}}
         {{ HTML::style('css/jquery.tagsinput.css') }}
         {{ HTML::style('css/bootstrap-fileupload.css')}}
+        {{ HTML::style('css/medium.css') }}
 
+        <style>
         @section('styles')
-            <style>
-            </style>
+            
         @show
+        </style>
+
+       
+
     </head>
 
     <body>
@@ -157,6 +162,12 @@
         {{ HTML::script('js/holder.js') }}
         {{ HTML::script('js/jquery.tagsinput.js') }}
         {{ HTML::script('js/bootstrap-fileupload.js') }}
+        {{ HTML::script('js/medium.js') }}
 
+         <script>
+        @section('script')
+
+        @show
+        </script>
     </body>
 </html>
