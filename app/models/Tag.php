@@ -1,5 +1,17 @@
 <?php
 class Tag extends Eloquent {
+	public static function getTags() {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT * FROM tags ORDER BY count DESC');
+		if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return $tagrows;
+	}
+
 	public static function getPostsWithTagID($tagID, $pageNumber) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
 		$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid LIMIT 10');
@@ -37,5 +49,17 @@ class Tag extends Eloquent {
 		$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 		return $tagrows[0]['tag'];
+	}
+
+	public static function getTopTags() {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT * FROM tags ORDER BY count DESC LIMIT 5');
+		if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return $tagrows;
 	}
 }

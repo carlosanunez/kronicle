@@ -7,7 +7,7 @@
 
 @section('content')
 
-<div class="container contact">
+<div class="container contact" style="padding-top: 15px">
 
 <div class="row">
 <div class="col-lg-5">

@@ -30,3 +30,5 @@ Route::get('/projects', 'ProjectsController@showProjects');
 
 Route::get('/tags/{tagID}', 'TagsController@show');
 
+Route::get('/tags', 'TagsController@index');
+

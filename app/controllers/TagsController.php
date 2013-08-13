@@ -9,7 +9,11 @@ class TagsController extends BaseController {
 	 */
 	public function index()
 	{
-		return 'index';
+		$tags = Tag::getTags();
+		return View::make('tagsIndex')
+			->with('active', 'tags')
+			->with('activetag', 'allTags')
+			->with('tags', $tags);
 	}
 
 	/**
@@ -20,7 +24,8 @@ class TagsController extends BaseController {
 	public function create()
 	{
 		return View::make('create')
-			->with('active', 'create');
+			->with('active', 'create')
+			->with('activetag', 'none');
 	}
 
 	/**

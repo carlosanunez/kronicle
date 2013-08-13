@@ -31,6 +31,9 @@
 	background-color: rgba(255,255,255,0) !important;
 	color: #3399FB !important;
 }
+.badge {
+	padding: 4px 7px 2px 7px;
+}
 body {
 	padding-top: 45px;
     background-color: #F8F8F8;
@@ -72,6 +75,11 @@ body {
 	padding-bottom: 40px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid #DDDDDD;
+}
+.emphasize {
+	color: #F75F7A;
+	font-family: sans-serif;
+	font-weight: bold;
 }
 .form-section {
 	margin-top: 50px !important;
@@ -224,6 +232,14 @@ input {
 	list-style-type: none;
 	padding-top: 20px;
 	-webkit-padding-start: 0px;
+}
+.tagsIndex li span.glyphicon {
+	color: #3399FB;
+	font-size: 80%;
+}
+.tagsIndex li a {
+	color: #3399FB;
+	font-family: 'Futura LT';
 }
 .tagsinput .tag{
 	font-family: 'Conv_UniversLTStd-Light' !important;

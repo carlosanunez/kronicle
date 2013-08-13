@@ -56,34 +56,53 @@
                     <div class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Tags&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <?php 
+                                $toptags = Tag::getTopTags();
+                            ?>
                             <li class="dropdown-header">Common Tags</li>
-                            @if ($activetag == "games")
-                                <li class="activetag">
-                            @else
-                                <li>
+                            @if (isset($toptags[0]))
+                                @if ($activetag == $toptags[0]['tag'])
+                                    <li class="activetag">
+                                @else
+                                    <li>
+                                @endif
+                                    <a tabindex="-1" href="/tags/<?php print $toptags[0]['tagID']; ?>"><?php print $toptags[0]['tag']; ?></a></li>
                             @endif
-                                <a tabindex="-1" href="/tags/games">Games</a></li>
-                            @if ($activetag == "hot girls")
-                                <li class="activetag">
-                            @else
-                                <li>
+                            @if (isset($toptags[1]))
+                                @if ($activetag == $toptags[1]['tag'])
+                                    <li class="activetag">
+                                @else
+                                    <li>
+                                @endif
+                                    <a tabindex="-1" href="/tags/<?php print $toptags[1]['tagID']; ?>"><?php print $toptags[1]['tag']; ?></a></li>
                             @endif
-                                <a tabindex="-1" href="/tags/hot_girls">Hot Girls</a></li>
-                            @if ($activetag == "movies")
-                                <li class="activetag">
-                            @else
-                                <li>
+                            @if (isset($toptags[2]))
+                                @if ($activetag == $toptags[2]['tag'])
+                                    <li class="activetag">
+                                @else
+                                    <li>
+                                @endif
+                                    <a tabindex="-1" href="/tags/<?php print $toptags[2]['tagID']; ?>"><?php print $toptags[2]['tag']; ?></a></li>
                             @endif
-                                <a tabindex="-1" href="/tags/movies">Movies</a></li>
-                            @if ($activetag == "music")
-                                <li class="activetag">
-                            @else
-                                <li>
+                            @if (isset($toptags[3]))
+                                @if ($activetag == $toptags[3]['tag'])
+                                    <li class="activetag">
+                                @else
+                                    <li>
+                                @endif
+                                    <a tabindex="-1" href="/tags/<?php print $toptags[3]['tagID']; ?>"><?php print $toptags[3]['tag']; ?></a></li>
                             @endif
-                                <a tabindex="-1" href="/tags/music">Music</a></li>
+                            @if (isset($toptags[4]))
+                                @if ($activetag == $toptags[4]['tag'])
+                                    <li class="activetag">
+                                @else
+                                    <li>
+                                @endif
+                                    <a tabindex="-1" href="/tags/<?php print $toptags[4]['tagID']; ?>"><?php print $toptags[4]['tag']; ?></a></li>
+                            @endif
                             <li class="divider"></li>
-                            @if ($active == 'home')
-                                <li class="active">
+                            @if ($activetag == 'allTags')
+                                <li class="activetag">
                             @else
                                 <li>
                             @endif

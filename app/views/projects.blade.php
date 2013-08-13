@@ -7,7 +7,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="padding-top: 15px">
 	<div class="jumbotron">
       <span class="glyphicon glyphicon-folder-open title"></span>
   		<div class="title">Hello, world!</div>
