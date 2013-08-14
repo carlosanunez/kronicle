@@ -43,4 +43,17 @@ class Post extends Eloquent {
 		return $postrows;
 
 	}
+
+	public static function getPostsFromSearch($query) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT * FROM posts WHERE title LIKE :query OR content LIKE :query ORDER BY id DESC LIMIT 10');
+		$statement->bindValue(':query', '%'.$query.'%', PDO::PARAM_STR);
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return Post::getTagsForPost($postrows);
+	}
 }

@@ -30,8 +30,6 @@
         @show
         </style>
 
-       
-
     </head>
 
     <body>
@@ -127,8 +125,12 @@
                         <li>
                     @endif
                     <a href="/contact"><span class="glyphicon glyphicon-inbox">&nbsp;&nbsp;Contact</a></li>
-                    <form class="navbar-form pull-left" action="">
-                        <input type="text" class="form-control search" placeholder="Search">
+                    <form class="navbar-form pull-left" action="/search" method="get">
+                        <input type="text" name="query" class="form-control search" placeholder="Search" 
+                        @if (isset($_GET['query']))
+                            value="{{$query}}" style="color: #3399FB;"
+                        @endif
+                        >
                     </form>
                 </ul>
                 <ul class="nav navbar-nav pull-right">

@@ -5,6 +5,12 @@
 | Create
 @stop
 
+@section('styles')
+	body {
+		padding-top: 60px;
+	}
+@stop
+
 @section('script')
 	new Medium({
 	    element: document.getElementById('article'),
