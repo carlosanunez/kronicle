@@ -30,9 +30,9 @@
 			print '<div class="image">';
 				print '<img src="'.$posts[$count]['photo'].'" class="img-responsive" />';
 			print '</div>';
-			print '</p>';
-				print $posts[$count]['content'];
-			print '</p>';
+
+			print $posts[$count]['content'];
+			
 			print '<ul class="tags">';
 				$countTags = 0;
 				while ($countTags < count($posts[$count]['tags'])) {
