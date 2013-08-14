@@ -35,3 +35,5 @@ Route::get('/tags/{tagID}', 'TagsController@show');
 Route::get('/tags', 'TagsController@index');
 
 Route::get('/search', 'SearchController@index');
+
+Route::post('/submitted', 'SubmitController@postSubmit');

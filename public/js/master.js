@@ -33,6 +33,8 @@ $(window).load(function() {
 			autocomplete_url:'/tags/json' // jquery ui autocomplete requires a json endpoint
 		});
 	});
+
+	
 });		
 
 
