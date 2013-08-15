@@ -42,7 +42,15 @@ class PostsController extends BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		if (is_numeric($id)) {
+			$posts = Post::getPost($id);
+			return View::make('posts')
+				->with('active', 'create')
+				->with('activetag', 'none')
+				->with('post', $posts);
+		} else {
+			return Redirect::to('/404');
+		}
 	}
 
 	/**

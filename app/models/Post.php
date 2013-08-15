@@ -12,6 +12,19 @@ class Post extends Eloquent {
 		return Post::getTagsForPost($postrows);
 	}
 
+	public static function getPost($postID) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT * FROM posts WHERE id=:id');
+		$statement->bindValue(':id', $postID, PDO::PARAM_INT);
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return Post::getTagsForPost($postrows);
+	}
+
 	public static function getTagsForPost($postrows) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
 		$count = 0;

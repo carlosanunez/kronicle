@@ -12,7 +12,9 @@
         <meta http-equiv="expires" content="0" />
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
+        <link rel="icon" type="image/png" href="../img/favicon.png">
         <link rel="icon" type="image/png" href="img/favicon.png">
+
 
 
         <!-- CSS are placed here -->
@@ -169,7 +171,21 @@
          <script>
         @section('script')
 
-        @show
+        @stop
         </script>
+         <script type="text/javascript">
+    var disqus_url = 'http://wilfreddenton.com/helloworld.html';
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wilfmeister'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    
     </body>
 </html>
