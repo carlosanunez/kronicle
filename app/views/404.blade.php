@@ -15,7 +15,7 @@
 		position: relative;
 		left: 50%;
 		margin-left: -58px;
-		margin-top: 10px;
+		margin-top: 15px;
 		font-family: 'Futura LT';
 		padding-top: 6px;
 	}
