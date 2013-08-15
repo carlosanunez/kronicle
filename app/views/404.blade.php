@@ -17,6 +17,7 @@
 		margin-left: -58px;
 		margin-top: 10px;
 		font-family: 'Futura LT';
+		padding-top: 6px;
 	}
 	#Redirect a {
 		color: white !important;
