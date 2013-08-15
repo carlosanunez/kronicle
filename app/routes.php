@@ -16,7 +16,9 @@ Route::get('/contact', 'ContactController@showContact');
 
 //Admin authentication
 Route::get('/login', array('as' => 'login', 'uses' => 'AuthController@showLogin'));
+
 Route::post('/login', 'AuthController@postLogin');
+
 Route::get('/logout', 'AuthController@getLogout');
 
 Route::post('/mail', 'MailController@sendMail');
@@ -39,3 +41,10 @@ Route::get('/search', 'SearchController@index');
 Route::post('/submitted', 'SubmitController@postSubmit');
 
 Route::get('/posts/{tagID}', 'PostsController@show');
+
+Route::get('/404', 'ErrorController@show404');
+
+App::missing(function($exception)
+{
+	return Redirect::to('/404');
+});

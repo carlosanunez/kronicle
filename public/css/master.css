@@ -27,6 +27,32 @@
   font-weight:  200;
 }
 
+@font-face {
+  font-family: 'Habana';
+  src: url('../fonts/Habana.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Habana.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Habana.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Habana.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Habana.svg#52dd28ace74a3e7b99356ac53cce7a3e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Hamburger Heaven NF';
+  src: url('../fonts/HamburgerHeavenNF.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/HamburgerHeavenNF.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/HamburgerHeavenNF.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/HamburgerHeavenNF.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/HamburgerHeavenNF.svg#959bd76b37b4de3b6b84d01b9d74c913') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
 .active a {
 	background-color: rgba(255,255,255,0) !important;
 	color: #3399FB !important;
