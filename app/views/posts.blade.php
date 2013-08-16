@@ -17,11 +17,11 @@
 				print $post[0]['title'];
 			print '</a></span>';
 			if (!Auth::guest()) {
-		print '<div class="container pull-right" style="padding: 10px 0">';
+			print '<div class="container pull-right" style="padding: 10px 0">';
 			print '<a style="color: #F0AD4E; margin-right: 20px" href="/posts/'.$post[0]['id'].'/edit"><span class="glyphicon glyphicon-pencil" style="font-size: 80%"></span>&nbsp;Edit</a>';
 			print '<a id="delete" onclick="return confirm(\'Are you sure you want to delete this post?\')" href="/posts/'.$post[0]['id'].'/dust" style="color: #DE484C;"><span class="glyphicon glyphicon-remove" style="font-size: 80%"></span>&nbsp;Delete</a>';
-		print '</div>';
-		}
+			print '</div>';
+			}
 		print '</div>';
 		print '<div class="image">';
 			print '<img src="../'.$post[0]['photo'].'" class="img-responsive" />';
@@ -47,7 +47,7 @@
 	print '</div>';
 ?>
 <div class="container centered footer">
-<div id="disqus_thread"></div>
+	<div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_url = 'http://wilfreddenton.com/helloworld.html';

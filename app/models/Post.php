@@ -67,6 +67,8 @@ class Post extends Eloquent {
 			}
 		}
 
+		Tag::cleanTags();
+
 		$path = '../public/'.$post[0]['photo'];
 		File::delete($path);
 	

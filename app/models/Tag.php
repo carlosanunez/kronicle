@@ -71,4 +71,14 @@ class Tag extends Eloquent {
 		}
 		return json_encode($tagNames);
 	}
+
+	public static function cleanTags() {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('DELETE FROM tags WHERE count=0');
+		if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+	}
 }

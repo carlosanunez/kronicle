@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-| Create
+| Edit
 @stop
 
 @section('styles')
@@ -25,17 +25,17 @@
 
 @section('content')
 <div class="container">
-	<div class="title" style="padding-top: 20px;">Create Post</div>
+	<div class="title" style="padding-top: 20px;">Edit Post</div>
 	<div class="container">
-		{{ Form::open(array('url' => 'submitted', 'class' => 'form-horizontal', 'onsubmit' => 'return copyContent()', 'files' => true)) }}
+		{{ Form::open(array('url' => 'update/'.$post[0]["id"], 'class' => 'form-horizontal', 'onsubmit' => 'return copyContent()', 'files' => true)) }}
 		<div class="input-group" style="padding-top:30px">
 			{{ Form::label('title', 'Title', array('class' => 'control-label input-group-addon')) }}
-			{{ Form::text('title', Input::old('title'), $attributes = array('class' => 'form-control', 'placeholder' => "My Great Post")) }}
+			{{ Form::text('title', $post[0]['title'], $attributes = array('class' => 'form-control')) }}
             {{ $errors->first('title') }}
 		</div>
 		<div class="container form-section">
 		<span class="glyphicon glyphicon-paperclip"></span>
-		<span class="header">&nbsp;Choose Photo</span>
+		<span class="header">&nbsp;Change Photo</span>
 		<hr>
 		<div class="fileupload fileupload-new" data-provides="fileupload">
 	 		<div class="input-group">
@@ -55,15 +55,23 @@
 	</div>
 	<div class="container" style="margin-top: 30px">
 		<span class="glyphicon glyphicon-pencil"></span>
-		<span class="header">&nbsp;Write Post </span>
-		<div id="article" class="textarea"></div>
+		<span class="header">&nbsp;Edit Content</span>
+		<div id="article" class="textarea">{{$post[0]['content']}}</div>
 		{{ Form::textarea('message', Input::old('message'), $attributes = array('cols' => '100', 'row' => '10','style' => 'display:none;' ,'id' => 'textarea-hidden', 'class' => 'form-control')) }}
 	    {{ $errors->first('message') }}
 	</div>
 	<div class="container form-section">
 		<span class="glyphicon glyphicon-tags"></span>
-		<span class="header">&nbsp;Tag Post</span>
-		</p><input id="tags_1" class="form-control" name="tags" type="text" value=""/></p>	
+		<span class="header">&nbsp;Edit Tags</span>
+		<?php
+			$tags = $post[0]['tags'];
+			$tagsString = '';
+			foreach ($tags as $tag) {
+				$tagsString .= $tag[0]['tag'];
+				$tagsString .= ',';
+			}
+		?>
+		</p><input id="tags_1" class="form-control" name="tags" type="text" value="<?php print $tagsString; ?>"/></p>	
 	</div>
 	{{ Form::submit('submit', 
 	array('class' => 'btn btn-success form-control form-section', 
@@ -71,7 +79,7 @@
 	</form>
 </div>
 <div class="footer form-section">
-<a href="https://github.com/wilfreddenton/kronicle" target="_blank" ><img src="img/kronicle-logo-ultralight.png" width="150px"/></a>
+<a href="https://github.com/wilfreddenton/kronicle" target="_blank"><img src="../../img/kronicle-logo-ultralight.png" width="150px"/></a>
 </div>
 
 

@@ -36,6 +36,9 @@
 @if ($message == 'uploaded')
 	<span style="font-size: 120%">Post Uploaded!</span>
 @endif
+@if ($message == 'updated')
+	<span style="font-size: 120%">Post Updated!</span>
+@endif
 @if ($message == 'error')
 	<span style="font-size: 120%">Wups!</span>
 @endif
@@ -46,6 +49,9 @@
 	@endif
 	@if ($message == 'uploaded')
 	<img class="img-responsive" src="img/uploaded.png" style="border-bottom-right-radius: 140px; border-bottom-left-radius: 150px;"/>
+	@endif
+	@if ($message == 'updated')
+	<img class="img-responsive" src="../img/update.png" style="border-bottom-right-radius: 75px; border-bottom-left-radius: 20px;"/>
 	@endif
 	@if ($message == 'error')
 	<img class="img-responsive" src="img/error.png" style="border-bottom-right-radius: 100px; border-bottom-left-radius: 130px;"/>
@@ -60,6 +66,12 @@
 @endif
 @if ($message == 'uploaded')
 <p>Sit back, relax, and enjoy your blog</p>
+<div class="container" style="text-align:center;">
+<a id="Redirect" class="btn btn-success" href="/posts/<?php print $post[0]['id']; ?>">Go to Post</a>
+</div>
+@endif
+@if ($message == 'updated')
+<p>The post has been refreshed with new content</p>
 <div class="container" style="text-align:center;">
 <a id="Redirect" class="btn btn-success" href="/posts/<?php print $post[0]['id']; ?>">Go to Post</a>
 </div>

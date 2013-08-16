@@ -28,6 +28,11 @@ Route::group(array('before' => 'auth'), function()
     Route::get('/create', 'PostsController@create');
     Route::get('/deleted', 'MiscController@showDeleted');
     Route::get('/success', 'MiscController@showUploaded');
+    Route::get('/updated/{id}', 'MiscController@showUpdated');
+    Route::get('/posts/{id}/dust', 'PostsController@destroy');
+	Route::get('/posts/{id}/edit', 'PostsController@edit');
+	Route::post('/submitted', 'PostsController@store');
+	Route::post('/update/{id}', 'PostsController@update');
 });
 
 Route::get('/projects', 'ProjectsController@showProjects');
@@ -40,11 +45,7 @@ Route::get('/tags', 'TagsController@index');
 
 Route::get('/search', 'SearchController@index');
 
-Route::post('/submitted', 'SubmitController@postSubmit');
-
 Route::get('/posts/{id}', 'PostsController@show');
-
-Route::get('/posts/{id}/dust', 'PostsController@destroy');
 
 Route::get('/404', 'MiscController@show404');
 

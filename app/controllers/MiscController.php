@@ -30,4 +30,13 @@
 				->with('activetag', 'none')
 				->with('message', 'error');
 		}
+
+		public function showUpdated($id) {
+			$post = Post::getPost($id);
+			return View::make('message')
+				->with('active', 'updated')
+				->with('activetag', 'none')
+				->with('post', $post)
+				->with('message', 'updated');
+		}
 	}
