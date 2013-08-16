@@ -27,6 +27,7 @@ Route::group(array('before' => 'auth'), function()
 {
     Route::get('/create', 'PostsController@create');
     Route::get('/deleted', 'MiscController@showDeleted');
+    Route::get('/success', 'MiscController@showUploaded');
 });
 
 Route::get('/projects', 'ProjectsController@showProjects');
@@ -46,6 +47,8 @@ Route::get('/posts/{id}', 'PostsController@show');
 Route::get('/posts/{id}/dust', 'PostsController@destroy');
 
 Route::get('/404', 'MiscController@show404');
+
+Route::get('/error', 'MiscController@showError');
 
 App::missing(function($exception)
 {

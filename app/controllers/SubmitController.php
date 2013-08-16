@@ -93,6 +93,6 @@
 					throw new Exception($err);
 				}
 			}
-			return Redirect::to('/');
+			return Redirect::to('/success');
 		}
 	}

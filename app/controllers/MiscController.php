@@ -9,11 +9,25 @@
 		}
 
 		public function showDeleted() {
-			return View::make('success')
-				->with('active', '404')
+			return View::make('message')
+				->with('active', 'deleted')
 				->with('activetag', 'none')
 				->with('message', 'deleted');
 		}
 
+		public function showUploaded() {
+			$post = Post::getMostRecentPost();
+			return View::make('message')
+				->with('active', 'uploaded')
+				->with('activetag', 'none')
+				->with('post', $post)
+				->with('message', 'uploaded');
+		}
 
+		public function showError() {
+			return View::make('message')
+				->with('active', 'deleted')
+				->with('activetag', 'none')
+				->with('message', 'error');
+		}
 	}

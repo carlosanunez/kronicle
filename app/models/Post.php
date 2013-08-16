@@ -25,6 +25,17 @@ class Post extends Eloquent {
 		return Post::getTagsForPost($postrows);
 	}
 
+	public static function getMostRecentPost() {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT * FROM posts ORDER BY id DESC LIMIT 1');
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return Post::getTagsForPost($postrows);
+	}
 	public static function deletePost($postID) {
 		$post = Post::getPost($postID);
 		$tags = $post[0]['tags'];
