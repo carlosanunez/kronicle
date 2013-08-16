@@ -20,7 +20,6 @@
 	function copyContent () {
 		document.getElementById("textarea-hidden").value =  
 		document.getElementById("article").innerHTML;
-		alert(4);
 	}
 @stop
 
@@ -60,7 +59,6 @@
 		<div id="article" class="textarea"></div>
 		{{ Form::textarea('message', Input::old('message'), $attributes = array('cols' => '100', 'row' => '10','style' => 'display:none;' ,'id' => 'textarea-hidden', 'class' => 'form-control')) }}
 	    {{ $errors->first('message') }}
-	</div>
 	</div>
 	<div class="container form-section">
 		<span class="glyphicon glyphicon-tags"></span>

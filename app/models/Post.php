@@ -25,6 +25,42 @@ class Post extends Eloquent {
 		return Post::getTagsForPost($postrows);
 	}
 
+	public static function deletePost($postID) {
+		$post = Post::getPost($postID);
+		$tags = $post[0]['tags'];
+
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('DELETE FROM posts WHERE id=:id');
+		$statement->bindValue(':id', $postID, PDO::PARAM_INT);
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		
+		$statement = $db->prepare('DELETE FROM postTags WHERE postID=:id');
+		$statement->bindValue(':id', $postID, PDO::PARAM_INT);
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+
+		foreach ($tags as $tag) {
+			$statement = $db->prepare('UPDATE tags SET count=count-1 WHERE tagID=:tagid');
+			$statement->bindValue(':tagid', $tag[0]['tagID'], PDO::PARAM_STR);
+	     	if (!$statement->execute())
+			{
+				$err = print_r($statement->errorInfo(), true);
+				throw new Exception($err);
+			}
+		}
+
+		$path = '../public/'.$post[0]['photo'];
+		File::delete($path);
+	
+	}
+
 	public static function getTagsForPost($postrows) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
 		$count = 0;

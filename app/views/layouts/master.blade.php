@@ -171,7 +171,7 @@
          <script>
         @section('script')
 
-        @stop
+        @show
         </script>
          <script type="text/javascript">
     var disqus_url = 'http://wilfreddenton.com/helloworld.html';

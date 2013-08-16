@@ -45,7 +45,7 @@ class PostsController extends BaseController {
 		if (is_numeric($id)) {
 			$posts = Post::getPost($id);
 			return View::make('posts')
-				->with('active', 'create')
+				->with('active', 'none')
 				->with('activetag', 'none')
 				->with('post', $posts);
 		} else {
@@ -83,7 +83,8 @@ class PostsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		Post::deletePost($id);
+		return Redirect::to('/deleted');
 	}
 
 }

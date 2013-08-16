@@ -26,6 +26,7 @@ Route::post('/mail', 'MailController@sendMail');
 Route::group(array('before' => 'auth'), function()
 {
     Route::get('/create', 'PostsController@create');
+    Route::get('/deleted', 'MiscController@showDeleted');
 });
 
 Route::get('/projects', 'ProjectsController@showProjects');
@@ -40,9 +41,11 @@ Route::get('/search', 'SearchController@index');
 
 Route::post('/submitted', 'SubmitController@postSubmit');
 
-Route::get('/posts/{tagID}', 'PostsController@show');
+Route::get('/posts/{id}', 'PostsController@show');
 
-Route::get('/404', 'ErrorController@show404');
+Route::get('/posts/{id}/dust', 'PostsController@destroy');
+
+Route::get('/404', 'MiscController@show404');
 
 App::missing(function($exception)
 {
