@@ -1,8 +1,16 @@
 <?php
 class Post extends Eloquent {
-	public static function getPosts($pageNumber) {
+	public static function getPosts($pageNumber, $perPage = 10) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
-		$statement = $db->prepare('SELECT * FROM posts ORDER BY id DESC LIMIT 10');
+		if ($pageNumber == 1) {
+			$statement = $db->prepare('SELECT * FROM posts ORDER BY id DESC LIMIT :perpage');
+		} else {
+			$offset = $pageNumber - 1;
+			$offset = $offset * $perPage;
+			$statement = $db->prepare('SELECT * FROM posts ORDER BY id DESC LIMIT :perpage OFFSET :offset');
+			$statement->bindValue(':offset', $offset, PDO::PARAM_INT);
+		}
+		$statement->bindValue(':perpage', $perPage, PDO::PARAM_INT);
      	if (!$statement->execute())
 		{
 			$err = print_r($statement->errorInfo(), true);
@@ -108,7 +116,29 @@ class Post extends Eloquent {
 
 	public static function getPostsFromSearch($query) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
-		$statement = $db->prepare('SELECT * FROM posts WHERE title LIKE :query OR content LIKE :query ORDER BY id DESC LIMIT 10');
+		$statement = $db->prepare('SELECT id FROM posts WHERE title LIKE :query OR content LIKE :query ORDER BY id');
+		$statement->bindValue(':query', '%'.$query.'%', PDO::PARAM_STR);
+
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return Post::getTagsForPost($postrows);
+	}
+
+	public static function getPostsFromSearchOfPage($pageNumber, $query, $perPage = 10) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		if ($pageNumber == 1) {
+			$statement = $db->prepare('SELECT * FROM posts WHERE title LIKE :query OR content LIKE :query ORDER BY id DESC LIMIT :perpage');
+		} else {
+			$offset = $pageNumber - 1;
+			$offset = $offset * $perPage;
+			$statement = $db->prepare('SELECT * FROM posts WHERE title LIKE :query OR content LIKE :query ORDER BY id DESC LIMIT :perpage OFFSET :offset');
+			$statement->bindValue(':offset', $offset, PDO::PARAM_INT);
+		}
+		$statement->bindValue(':perpage', $perPage, PDO::PARAM_INT);
 		$statement->bindValue(':query', '%'.$query.'%', PDO::PARAM_STR);
      	if (!$statement->execute())
 		{
@@ -117,5 +147,45 @@ class Post extends Eloquent {
 		}
 		$postrows = $statement->fetchAll(PDO::FETCH_ASSOC);
 		return Post::getTagsForPost($postrows);
+	}
+
+	public static function getNumberOfPages($perPage = 10) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		$statement = $db->prepare('SELECT id FROM posts');
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$idrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+		$count = count($idrows);
+		$count = ((int)($count / $perPage));
+		$mod = $count % $perPage;
+		$pages = 0;
+		if ($mod != 0) {
+			$pages = $count + 1;
+		} else {
+			$pages = $count;
+		}
+		if ($pages == 0) {
+			$pages = 1;
+		}
+		return $pages;
+	}
+
+	public static function getNumberOfPagesOfPosts($posts, $perPage = 10) {
+		$count = count($posts);
+		$count = ((int)($count / $perPage));
+		$mod = $count % $perPage;
+		$pages = 0;
+		if ($mod != 0) {
+			$pages = $count + 1;
+		} else {
+			$pages = $count;
+		}
+		if ($pages == 0) {
+			$pages = 1;
+		}
+		return $pages;
 	}
 }

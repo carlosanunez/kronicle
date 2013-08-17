@@ -11,11 +11,27 @@ class SearchController extends BaseController {
 	{
 		$query = Input::get('query');
 		$posts = Post::getPostsFromSearch($query);
+
+		$numberOfPages = Post::getNumberOfPagesOfPosts($posts);
+		if (Input::get('page')) {
+			$page = Input::get('page');
+		}
+		if (isset($page) && is_numeric($page) && ($page <= $numberOfPages) && ($page != 0)) {
+			$page = abs(Input::get('page'));
+		} else if (!Input::get('page')) {
+			$page = 1;
+		} else {
+			return Redirect::to('/404');
+		}
+		$posts = Post::getPostsFromSearchOfPage($page, $query);
+
 		return View::make('search')
 			->with('active', 'search')
 			->with('activetag', 'none')
 			->with('query', $query)
-			->with('posts', $posts);
+			->with('posts', $posts)
+			->with('page', $page)
+			->with('numberOfPages', $numberOfPages);
 	}
 
 	/**

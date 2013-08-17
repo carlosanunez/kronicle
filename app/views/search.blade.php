@@ -56,13 +56,59 @@
 ?>
 <div class="container centered footer">
     <ul class="pagination">
-        <li><a href="#"><span class="glyphicon glyphicon-chevron-left" style="font-size: 70%"></span></a></li>
-        <li><a href="#" class="active">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-chevron-right" style="font-size: 70%"></a></li>
+    <?php
+		$prev = $page - 1;
+		$next = $page + 1;
+		
+		if ($prev != 0) {
+			print '<li><a href="/search?query='.$query.'&page='.$prev.'"><span class="glyphicon glyphicon-chevron-left" style="font-size: 70%"></span></a></li>'.PHP_EOL;
+		}
+		if ($page <= 5) {
+			if ($numberOfPages <= 5) {
+				for ($count = 1; $count <= $numberOfPages; $count++) {
+					if ($page == $count) {
+						print '<li><a class="active" href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+					} else {
+						print '<li><a href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+					}
+				}
+			} else {
+				for ($count = 1; $count <= 5; $count++) {
+					if ($page == $count) {
+						print '<li><a class="active" href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+					} else {
+						print '<li><a href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+					}
+				}
+			}
+		} else if ($page > 5 && (($page + 2) <= $numberOfPages)) {
+			$lowerBound = $page - 2;
+			$upperBount = $page + 2;
+			for ($count = $lowerBound; $count <= $upperBount; $count++) {
+				if ($page == $count) {
+					print '<li><a class="active" href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+				} else {
+					print '<li><a href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+				}
+			}
+		} else if ($page > 5 && (($page + 2) > $numberOfPages)) {
+			$difference = $numberOfPages - $page;
+			$difference = $difference + 1;
+			$difference = 5 - $difference;
+			$lowerBound = $page - $difference;
+			$upperBound = $numberOfPages;
+			for ($count = $lowerBound; $count <= $upperBound; $count++) {
+				if ($page == $count) {
+					print '<li><a class="active" href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+				} else {
+					print '<li><a href="/search?query='.$query.'&page='.$count.'">'.$count.'</a></li>'.PHP_EOL;
+				}
+			}
+		}
+		if ($next <= $numberOfPages) {
+			print '<li><a href="/search?query='.$query.'&page='.$next.'"><span class="glyphicon glyphicon-chevron-right" style="font-size: 70%"></a></li>'.PHP_EOL;
+		}
+	?>
     </ul>
 </div>
 

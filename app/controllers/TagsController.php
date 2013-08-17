@@ -46,16 +46,31 @@ class TagsController extends BaseController {
 	 */
 	public function show($tagID)
 	{
-		if (!isset($_GET['page'])) {
-			$pageNumber = 1;
+		$posts = Tag::getPostsWithTagID($tagID);
+		$numberOfPages = count($posts);
+
+		if (Input::get('page')) {
+			$page = Input::get('page');
 		}
-		$posts = Tag::getPostsWithTagID($tagID, $pageNumber);
+		if (isset($page) && is_numeric($page) && ($page <= $numberOfPages) && ($page != 0)) {
+			$page = abs(Input::get('page'));
+		} else if (!Input::get('page')) {
+			$page = 1;
+		} else {
+			return Redirect::to('/404');
+		}
+		
+		$posts = Tag::getPostsWithTagIDOfPage($page, $tagID);
+
 		$tag = Tag::getTag($tagID);
 		return View::make('tags')
 			->with('active', 'tags')
 			->with('activetag', $tag)
 			->with('posts', $posts)
-			->with('tag', $tag);
+			->with('tag', $tag)
+			->with('tagID', $tagID)
+			->with('page', $page)
+			->with('numberOfPages', $numberOfPages);
 	}
 
 	/**

@@ -17,11 +17,25 @@ class HomeController extends BaseController {
 
 	public function showHome()
 	{
-		$posts = Post::getPosts(1);
+		$numberOfPages = Post::getNumberOfPages();
+		if (Input::get('page')) {
+			$page = Input::get('page');
+		}
+		if (isset($page) && is_numeric($page) && ($page <= $numberOfPages) && ($page != 0)) {
+			$page = abs(Input::get('page'));
+		} else if (!Input::get('page')) {
+			$page = 1;
+		} else {
+			return Redirect::to('/404');
+		}
+		
+		$posts = Post::getPosts($page);
 		return View::make('home')
 			->with('active', 'home')
 			->with('posts', $posts)
-			->with('activetag', 'none');
+			->with('activetag', 'none')
+			->with('page', $page)
+			->with('numberOfPages', $numberOfPages);
 	}
 
 }

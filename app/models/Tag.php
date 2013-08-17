@@ -12,10 +12,43 @@ class Tag extends Eloquent {
 		return $tagrows;
 	}
 
-	public static function getPostsWithTagID($tagID, $pageNumber) {
+	public static function getPostsWithTagID($tagID) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
-		$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid LIMIT 10');
+		$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid');
 		$statement->bindValue(':tagid', $tagID, PDO::PARAM_STR);
+     	if (!$statement->execute())
+		{
+			$err = print_r($statement->errorInfo(), true);
+			throw new Exception($err);
+		}
+		$tagrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+		$postrows = [];
+		foreach($tagrows as $tag) {
+			$statement = $db->prepare('SELECT * FROM posts WHERE id=:id ORDER BY id');
+			$statement->bindValue(':id', $tag['postID'], PDO::PARAM_STR);
+	     	if (!$statement->execute())
+			{
+				$err = print_r($statement->errorInfo(), true);
+				throw new Exception($err);
+			}
+			$postrows = array_merge($statement->fetchAll(PDO::FETCH_ASSOC), $postrows);
+		}
+		return Post::getTagsForPost($postrows);
+	}
+
+	public static function getPostsWithTagIDOfPage($pageNumber, $tagID, $perPage = 10) {
+		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
+		if ($pageNumber == 1) {
+			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID DESC LIMIT :perpage');
+		} else {
+			$offset = $pageNumber - 1;
+			$offset = $offset * $perPage;
+			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID DESC LIMIT :perpage OFFSET :offset');
+			$statement->bindValue(':offset', $offset, PDO::PARAM_INT);
+		}
+		$statement->bindValue(':tagid', $tagID, PDO::PARAM_STR);
+		$statement->bindValue(':perpage', $perPage, PDO::PARAM_INT);
      	if (!$statement->execute())
 		{
 			$err = print_r($statement->errorInfo(), true);
