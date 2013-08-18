@@ -42,6 +42,9 @@
 @if ($message == 'error')
 	<span style="font-size: 120%">Wups!</span>
 @endif
+@if ($message == 'noResults')
+	<span style="font-size: 120%">Nothing Found!</span>
+@endif
 </div>
 <div class="container" style="text-align: center; padding-top: 10px;">
 	@if ($message == 'deleted')
@@ -55,6 +58,9 @@
 	@endif
 	@if ($message == 'error')
 	<img class="img-responsive" src="img/error.png" style="border-bottom-right-radius: 100px; border-bottom-left-radius: 130px;"/>
+	@endif
+	@if ($message == 'noResults')
+	<img class="img-responsive" src="img/noresults.png" style="border-bottom-right-radius: 50px; border-bottom-left-radius: 130px; border-top-right-radius: 100px"/>
 	@endif
 </div>
 <br>
@@ -78,6 +84,12 @@
 @endif
 @if ($message == 'error')
 <p>Sorry, there was an error</p>
+<div class="container" style="text-align:center;">
+<a id="Redirect" class="btn btn-success" href="/">Back to Home</a>
+</div>
+@endif
+@if ($message == 'noResults')
+<p>Sorry captain, there's no posts to be seen anywhere!</p>
 <div class="container" style="text-align:center;">
 <a id="Redirect" class="btn btn-success" href="/">Back to Home</a>
 </div>

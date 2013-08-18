@@ -47,6 +47,8 @@ Route::get('/search', 'SearchController@index');
 
 Route::get('/posts/{id}', 'PostsController@show');
 
+Route::get('/no-results', 'MiscController@showNoResults');
+
 Route::get('/404', 'MiscController@show404');
 
 Route::get('/error', 'MiscController@showError');

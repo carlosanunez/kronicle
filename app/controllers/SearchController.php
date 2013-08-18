@@ -25,13 +25,18 @@ class SearchController extends BaseController {
 		}
 		$posts = Post::getPostsFromSearchOfPage($page, $query);
 
-		return View::make('search')
-			->with('active', 'search')
-			->with('activetag', 'none')
-			->with('query', $query)
-			->with('posts', $posts)
-			->with('page', $page)
-			->with('numberOfPages', $numberOfPages);
+		if (count($posts) == 0) {
+			return Redirect::to('no-results');
+		}
+		else {
+			return View::make('search')
+				->with('active', 'search')
+				->with('activetag', 'none')
+				->with('query', $query)
+				->with('posts', $posts)
+				->with('page', $page)
+				->with('numberOfPages', $numberOfPages);
+		}
 	}
 
 	/**

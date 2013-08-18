@@ -39,4 +39,11 @@
 				->with('post', $post)
 				->with('message', 'updated');
 		}
+
+		public function showNoResults() {
+			return View::make('message')
+				->with('active', 'deleted')
+				->with('activetag', 'none')
+				->with('message', 'noResults');
+		}
 	}
