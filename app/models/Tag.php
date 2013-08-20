@@ -40,11 +40,11 @@ class Tag extends Eloquent {
 	public static function getPostsWithTagIDOfPage($pageNumber, $tagID, $perPage = 10) {
 		$db = new PDO('sqlite:' . '../app/database/production.sqlite');
 		if ($pageNumber == 1) {
-			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID DESC LIMIT :perpage');
+			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID ASC LIMIT :perpage');
 		} else {
 			$offset = $pageNumber - 1;
 			$offset = $offset * $perPage;
-			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID DESC LIMIT :perpage OFFSET :offset');
+			$statement = $db->prepare('SELECT postID FROM posttags WHERE tagID=:tagid ORDER BY postID ASC LIMIT :perpage OFFSET :offset');
 			$statement->bindValue(':offset', $offset, PDO::PARAM_INT);
 		}
 		$statement->bindValue(':tagid', $tagID, PDO::PARAM_STR);

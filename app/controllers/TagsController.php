@@ -47,7 +47,7 @@ class TagsController extends BaseController {
 	public function show($tagID)
 	{
 		$posts = Tag::getPostsWithTagID($tagID);
-		$numberOfPages = count($posts);
+		$numberOfPages = Post::getNumberOfPagesOfPosts($posts);
 
 		if (Input::get('page')) {
 			$page = Input::get('page');
