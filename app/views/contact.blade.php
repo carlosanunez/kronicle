@@ -39,7 +39,7 @@
 	</div>
 	<br>
 	<br>
-	<button class="btn btn-default">submit</button>
+	<button class="btn btn-default contactSubmit">submit</button>
 	<br>
 	<br>
 	<br>

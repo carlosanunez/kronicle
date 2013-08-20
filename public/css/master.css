@@ -73,13 +73,14 @@
 body {
 	padding-top: 45px;
     background-color: #F8F8F8;
-    font-family: 'Conv_UniversLTStd-Light';
+    
 }
 .border-left {
 	border-left: 1px solid #DDDDDD;
 }
 .btn {
 	padding-top: 9px;
+	font-family: 'Conv_UniversLTStd-Light';
 }
 .btn-file {
 	padding:0px;
@@ -121,6 +122,7 @@ body {
 	padding-bottom: 40px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid #DDDDDD;
+	font-family: 'Conv_UniversLTStd-Light';
 }
 .emphasize {
 	color: #F75F7A;
@@ -345,6 +347,12 @@ input {
 	height: 25px;
 	margin-top: 6px;
 	margin-left: 13px;
+}
+
+@media all and (max-width: 500px) {
+.title {
+	font-size: 250%;
+}
 }
 
 @media all and (max-width: 767px) {

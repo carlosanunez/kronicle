@@ -37,4 +37,5 @@
 <p>Looks like you missed the mark by a little...</p>
 
 <div id="Redirect" class="btn btn-success"><a href="/">Back to Home</a></div>
+<div class="footer" style="border: none"></div>
 @stop

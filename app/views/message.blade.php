@@ -94,5 +94,5 @@
 <a id="Redirect" class="btn btn-success" href="/">Back to Home</a>
 </div>
 @endif
-
+<div class="footer" style="border:none"></div>
 @stop
