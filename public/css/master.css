@@ -111,7 +111,7 @@ body {
 	text-align: right;
 	margin-right: 0px;
 	padding-right: 0px;
-	font-family: 'Futura LT';
+	font-family: 'Futura LT' !important;
 }
 .disqus:hover {
 	color: #5CB85C;
@@ -136,7 +136,7 @@ body {
 	position: relative;
 }
 .header {
-	font-family: 'Futura LT';
+	font-family: 'Futura LT' !important;
 }
 hr {
 	border-top: 1px solid #DDDDDD;
@@ -169,7 +169,7 @@ input {
 	color: #bbbbbb;
 	padding-top: 20px;
 	font-size: 100%;
-	font-family: 'Futura LT';
+	font-family: 'Futura LT' !important;
 }
 .jumbotron .glyphicon {
 	color: #3BA4FC !important;
@@ -266,7 +266,7 @@ input {
 .tag {
 	display: inline;
 	padding-right: 20px;
-	font-family: 'Futura LT';
+	font-family: 'Futura LT' !important;
 }
 .tag span {
 	font-size: 80%;
@@ -285,7 +285,7 @@ input {
 }
 .tagsIndex li a {
 	color: #3399FB;
-	font-family: 'Futura LT';
+	font-family: 'Futura LT' !important;
 }
 .textarea {
 	width: 100%;
