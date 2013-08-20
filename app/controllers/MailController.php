@@ -20,7 +20,7 @@
 			Mail::send('emails.testMail', $maildata, function($message) use($maildata)
 				{
 					$message->from($maildata['email']);
-					$message->to('evankozliner@gmail.com')->subject('test message');
+					$message->to('youremailhere')->subject('message from blog');
 				});
 
 			//should appear in the mail

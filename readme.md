@@ -8,20 +8,27 @@
 
 by [@wilfreddenton](https://twitter.com/wilfreddenton) & [@rogue_whale](https://twitter.com/rogue_whale)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+Kronicle is a summber project that we worked on to make ourselves a nice looking blog, a place to store our online portfolios, and a way to teach ourselves more about web development.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+### Installation
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1. Setting your contact information: open the contact.blade.php and fill in where your email address should go. Then open the mail.php file and fill in the info for the mail account that will be sending the emails. Finally, open the MailController and put in the email address you want to recieve mail.
 
-## Official Documentation
+2. Set your login username and password. Use the sqlite3 command on the production.sqlite database in the app/database folder. Use SQL query 'UPDATE users SET id='yourUsername', password='yourPassword' WHERE id='admin';' to change the login info to your own.
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+3. Go to yoursite.com/login to login to the blog with your username and password. 
+
+4. Click the plus icon in the navigation bar to create your first post!
+
+To delete the hello world! post just click on the title and the click delete on the post's page.
+
+Thanks
+- The Kronicle Team
 
 ### Contributing To Laravel
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+**All issues and pull requests should be filed on the [wilfreddenton/kronicle](http://github.com/wilfreddenton/kronicle) repository.**
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Kronicle platform is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

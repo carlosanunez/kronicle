@@ -14,9 +14,9 @@
 	<div class="container contact-info">
 		<div class="title">email me</div>
 		<div class="container email">
-			<a href="mailto:kronicleblog@gmail.com" class="btn btn-success">
+			<a href="mailto:your_email_here" class="btn btn-success">
 				<span class="glyphicon glyphicon-comment"></span>
-				&nbsp;&nbsp;kronicleblog@gmail.com
+				&nbsp;&nbsp;youremailhere@provider.com
 			</a>
 		</div>
 	</div>

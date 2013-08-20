@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'kronicleblog@gmail.com',
+	'username' => 'insertemailhere',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'kronicleblog69',
+	'password' => 'insertemailpasswordhere',
 
 	/*
 	|--------------------------------------------------------------------------
