@@ -25,8 +25,6 @@ To delete the hello world! post just click on the title and the click delete on 
 Thanks
 - The Kronicle Team
 
-### Contributing To Laravel
-
 **All issues and pull requests should be filed on the [wilfreddenton/kronicle](http://github.com/wilfreddenton/kronicle) repository.**
 
 ### License
